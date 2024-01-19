@@ -1,0 +1,632 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  background: rgb(238, 31, 148);
+  
+  font-family: "Open Sans", sans-serif,"Dancing Script";
+   
+}
+
+a {
+  color: #e03a3c;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #e76668;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif, "Dancing Script";
+}
+
+
+
+/*--------------------------------------------------------------
+# presentacion seccion
+--------------------------------------------------------------*/
+
+#presentacion {
+  width: 100%;
+  height: 100vh;
+  background: url("../img/fondo.jpg") top center no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 82px;
+  
+}
+
+#presentacion:before {
+  content: "";
+  
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#presentacion h1 {
+  text-align: center;
+  margin: 0;
+  font-size: 60px;
+  font-weight: 700;
+  color: #fff;
+}
+
+#presentacion h2 {
+  text-align: center;
+  color: #fff;
+  margin: 10px 0 0 0;
+  font-size: 40px;
+  font-family: "Dancing Script";
+}
+
+@media (max-width: 768px) {
+  #presentacion {
+    text-align: center;
+    padding-top: 58px;
+  }
+
+  #presentacion h1 {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+  }
+
+  #presentacion h2 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 500px;
+    line-height: 24px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+.portfolio .portfolio-item {
+  margin-bottom: 30px;
+  
+}
+
+.portfolio #portfolio-flters {
+  padding: 0;
+  margin: 0 auto 20px auto;
+  list-style: none;
+  text-align: center;
+}
+
+.portfolio #portfolio-flters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 8px 15px 10px 15px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #444444;
+  margin-bottom: 5px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 3px;
+}
+
+.portfolio #portfolio-flters li:hover,
+.portfolio #portfolio-flters li.filter-active {
+  color: #fff;
+  background: #e03a3c;
+}
+
+.portfolio #portfolio-flters li:last-child {
+  margin-right: 0;
+}
+
+.portfolio .portfolio-wrap {
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  background: rgba(17, 17, 17, 0.6);
+}
+
+.portfolio .portfolio-wrap::before {
+  content: "";
+  background: rgba(17, 17, 17, 0.6);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transition: all ease-in-out 0.3s;
+  z-index: 2;
+  opacity: 0;
+}
+
+.portfolio .portfolio-wrap img {
+  transition: all ease-in-out 0.6s;
+  width: 400px;
+  height: 200px;
+}
+
+.portfolio .portfolio-wrap .portfolio-info {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  transition: all ease-in-out 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.portfolio .portfolio-wrap .portfolio-info h4 {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.portfolio .portfolio-wrap .portfolio-info p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  font-style: italic;
+}
+
+.portfolio .portfolio-wrap .portfolio-links {
+  text-align: center;
+  z-index: 4;
+}
+
+.portfolio .portfolio-wrap .portfolio-links a {
+  color: rgba(255, 255, 255, 0.4);
+  margin: 0 5px 0 0;
+  font-size: 28px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.portfolio .portfolio-wrap .portfolio-links a:hover {
+  color: #fff;
+}
+
+.portfolio .portfolio-wrap:hover::before {
+  opacity: 1;
+}
+
+.portfolio .portfolio-wrap:hover img {
+  transform: scale(1.2);
+}
+
+.portfolio .portfolio-wrap:hover .portfolio-info {
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Portfolio Details
+--------------------------------------------------------------*/
+.portfolio-details {
+  padding-top: 40px;
+}
+
+.portfolio-details .portfolio-details-slider img {
+  width: 100%;
+}
+
+.portfolio-details .portfolio-details-slider .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  opacity: 1;
+  border: 1px solid #e03a3c;
+}
+
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #e03a3c;
+}
+
+.portfolio-details .portfolio-info {
+  padding: 30px;
+  box-shadow: 0px 0 30px rgba(17, 17, 17, 0.08);
+}
+
+.portfolio-details .portfolio-info h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.portfolio-details .portfolio-info ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+
+.portfolio-details .portfolio-info ul li+li {
+  margin-top: 10px;
+}
+
+.portfolio-details .portfolio-description {
+  padding-top: 30px;
+}
+
+.portfolio-details .portfolio-description h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.portfolio-details .portfolio-description p {
+  padding: 0;
+}
+
+
+
+
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+/*--------------------------------------------------------------
+# frase Section
+--------------------------------------------------------------*/
+#frase {
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  background: rgb(238, 31, 148);
+  background-size: cover;
+  position: relative;
+  padding-top: 82px;
+}
+
+#frase:before {
+  text-align: center;
+  content: "";
+  background: rgb(238, 31, 148);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#frase h1 {
+  text-align: center;
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  color: #fff;
+}
+
+#frase h2 {
+  font-family: 'Dancing Script';
+  text-align: center;
+  color: #fff;
+  margin: 10px 0 0 0;
+  font-size: 24px;
+}
+
+#frase .btn-get-started {
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 4px;
+  transition: 0.5s;
+  margin-top: 30px;
+  color: #fff;
+  background: #e03a3c;
+  border: 2px solid #e03a3c;
+}
+
+#frase .btn-get-started:hover {
+  text-align: center;
+  background: transparent;
+  border-color: #fff;
+}
+
+@media (max-width: 768px) {
+  
+  
+  #frase {
+    text-align: center;
+    padding-top: 58px;
+  }
+
+  #frase h1 {
+    text-align: center;
+    font-size: 28px;
+  }
+
+  #frase h2 {
+    text-align: center;
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+@media (max-height: 500px) {
+  #frase {
+    text-align: center;
+    height: 120vh;
+  }
+}
+
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+  
+  padding: 60px 0;
+  overflow: hidden;
+  position: relative;
+  
+}
+
+.section-title {
+  text-align: center;
+  padding-bottom: 30px;
+  position: relative;
+}
+
+.section-title h2 {
+  color: whitesmoke;
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #e03a3c;
+  bottom: 0;
+  left: calc(50% - 25px);
+}
+
+.section-title p {
+  margin-bottom: 0;
+  color: lightcyan;
+}
+
+.section-bg {
+  padding: 120px 0;
+  color: #fff;
+}
+
+.section-bg:before {
+  content: "";
+  background: rgb(238, 31, 148);
+ 
+  position: absolute;
+  bottom: 60px;
+  top: 60px;
+  left: 0;
+  right: 0;
+  transform: skewY(-3deg);
+}
+
+
+
+/*--------------------------------------------------------------
+# carrusel
+--------------------------------------------------------------*/
+
+
+
+.carru .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  opacity: 1;
+  border: 1px solid #e03a3c;
+}
+
+.carru .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #e03a3c;
+}
+.carousel-item img {
+  max-width: 300px; /* Ajusta el ancho máximo según tus necesidades */
+  height: 400px; /* La altura se ajustará automáticamente para mantener la proporción */
+  
+}
+
+
+
+
+/*--------------------------------------------------------------
+# confirmacion
+--------------------------------------------------------------*/
+/* Estilos para la sección confirmacion */
+#confirmacion {
+  background: rgb(238, 31, 148);
+  
+  padding: 60px 0;
+}
+
+#confirmacion .content p {
+  font-size: 18px;
+  color: #e8e8e8;
+  margin-bottom: 30px;
+}
+
+#confirmacion .content a.whatsapp-link {
+  display: inline-block;
+  background-color: #25d366;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+#confirmacion .content a.whatsapp-link:hover {
+  background-color: #128c7e;
+}
+
+/* Estilos para los icon-boxes en la sección confirmacion */
+#confirmacion .icon-box {
+  margin-bottom: 30px;
+}
+
+#confirmacion .icon-box h4 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #e8e8e8;
+  margin-top: 20px;
+}
+
+#confirmacion .icon-box p {
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+#confirmacion .icon-box img.icoreg {
+  max-width: 80px;
+  margin-bottom: 20px;
+}
+
+.bx , .wap{
+  color: chartreuse;
+}
+
+/*--------------------------------------------------------------
+# Counts
+--------------------------------------------------------------*/
+.counts {
+  padding-top: 80px;
+}
+
+.counts .count-box {
+  padding: 30px 30px 25px 30px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  box-shadow: 0px 2px 35px rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+}
+
+.counts .count-box i {
+  position: absolute;
+  width: 54px;
+  height: 54px;
+  top: -27px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  background: #fff;
+  color: #e03a3c;
+  border-radius: 50px;
+  border: 2px solid #fff;
+  box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.counts .count-box span {
+  font-size: 36px;
+  display: block;
+  font-weight: 700;
+  color: #111111;
+}
+
+.counts .count-box p {
+  padding: 0;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+}
+
+.countdown-item {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.countdown-number {
+  font-size: 48px;
+}
+
+.countdown-label {
+  font-size: 18px;
+}
+.countdown-item,
+.countdown-number,
+.countdown-label {
+  color: white;
+}
+
+/*--------------------------------------------------------------
+# mapa
+--------------------------------------------------------------*/
+
+.map-container {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.map-wrapper {
+  position: relative;
+  width: 40%; /* Valor más bajo para hacer el mapa menos ancho */
+  height: 0;
+  padding-bottom: 30%; /* Proporción 2:1 para mantener el aspecto */
+  overflow: hidden;
+  margin: 0 auto; /* Centrar horizontalmente */
+}
+
+
+.mapa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
